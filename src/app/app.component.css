@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* Estilos  */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,7 +12,6 @@ body {
     padding: 0 15px;
   }
   
-  /* Estilos para el encabezado */
   header {
     background-color: #007bff;
     color: #fff;
@@ -40,7 +39,6 @@ body {
     color: #fff;
   }
   
-  /* Estilos para el dashboard */
   .dashboard {
     background-color: #f9f9f9;
     padding: 30px 0;
@@ -56,7 +54,6 @@ body {
     margin-bottom: 10px;
   }
   
-  /* Estilos para los detalles del héroe */
   .hero-details {
     background-color: #fff;
     padding: 30px 0;
@@ -70,7 +67,6 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  /* Estilos para el listado de héroes */
   .hero-list {
     list-style: none;
     padding: 0;
