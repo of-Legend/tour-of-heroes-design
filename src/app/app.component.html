@@ -4,53 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tour of Heroes</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
   <header>
     <div class="header-container">
       <h1>Tour of Heroes</h1>
-      <button class="btn btn-primary">Agregar Héroe</button>
-      <button class="btn btn-secondary">Buscar Héroe</button>
+      <button class="btn btn-primary" (click)="onClick()">Agregar Héroe</button>
+      <button class="btn btn-secondary" 
+              (mousedown)="onMouseDown()" 
+              (mousemove)="onMouseMove()" 
+              (mouseout)="onMouseOut()" 
+              (mouseover)="onMouseOver()" 
+              (mouseup)="onMouseUp()">Buscar Héroe</button>
+      
     </div>
   </header>
   
   <section class="dashboard">
     <h2>Dashboard</h2>
-    <ul class="hero-list">
-      <li>SpiderMan</li>
-      <li>Hulk</li>
-      <li>Wonder Woman</li>
-      <li>SuperMan</li>
-      <li>Batman</li>
-
-
-    </ul>
-    
+    <!-- ... Resto de tu código ... -->
   </section>
   
   <section class="hero-details">
-    <h2>Detalles del Héroe</h2>
-    <div class="hero-card">
-      <h3>SpiderMan</h3>
-      <p>Descripción del héroe...</p>
-      <h3>Hulk</h3>
-      <p>Descripción del héroe...</p>
-      <h3>Wonder Woman</h3>
-      <p>Descripción del héroe...</p>
-      <h3>SuperMan</h3>
-      <p>Descripción del héroe...</p>
-      <h3>Batman</h3>
-      <p>Descripción del héroe...</p>
-    </div>
+    <!-- ... Resto de tu código ... -->
   </section>
   
   <section class="hero-list">
     <h2>Listado de Héroes</h2>
-    <ul class="hero-list">
-      <li>Héroe 1</li>
-      <li>Héroe 2</li>
-      <li>Héroe 3</li>
-    </ul>
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let heroe of heroes">
+        <div class="card">
+          <img [src]="heroe.imagenUrl" class="card-img-top" alt="Heroe Imagen">
+          <div class="card-body">
+            <h5 class="card-title">{{ heroe.nombre }}</h5>
+            <p class="card-text">{{ heroe.descripcion }}</p>
+            <a href="#" class="btn btn-primary" (click)="agregarHeroe()">Subir</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+  
+  
+  <!-- Agrega el enlace al archivo de JavaScript de Bootstrap si es necesario -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
